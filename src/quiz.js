@@ -34,11 +34,11 @@ function quiz() {
     let userAnswer = readlineSync.question('Your answer (number): ');
     let answerIndex = parseInt(userAnswer, 10) - 1;
 
-    if(answerIndex < 0 || answerIndex >= q.options.length) {
+    if(answerIndex < 0 || answerIndex >= q.options.length) { //validatin the user input is within the range of options based on index
         console.log(`Please select an option from 1 to ${q.options.length}`);
       } else if(q.options[answerIndex] === q.answer) { // Compare the text of the selected option to the answer
         console.log("Correct!");
-        score++;
+        score++;//Increment score variable by 1
       } else {
         console.log("Wrong!");
       }
